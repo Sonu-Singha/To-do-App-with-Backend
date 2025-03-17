@@ -1,0 +1,177 @@
+/* Responsive Styles */
+
+/* Tablet Devices (768px to 1024px) */
+@media screen and (max-width: 1024px) {
+    /* Main Layout */
+    .notes-grid,
+    .all-notes-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+        padding: 15px;
+    }
+
+    /* Form Elements */
+    .Title_Input {
+        width: 45%;
+    }
+
+    .Title_Button {
+        width: 15%;
+    }
+
+    /* Create Note Form */
+    .create-note-section {
+        max-width: 90%;
+        margin: 15px auto;
+    }
+}
+
+/* Mobile Devices (up to 767px) */
+@media screen and (max-width: 767px) {
+    /* Typography */
+    h1 {
+        font-size: 2rem;
+    }
+
+    /* Form Elements */
+    .Title_Form {
+        flex-direction: column;
+        height: auto;
+        padding: 15px;
+    }
+
+    .Title_Input {
+        width: 80%;
+        height: 45px;
+        margin: 10px 0;
+    }
+
+    .Title_Button {
+        width: 80%;
+        height: 45px;
+        margin: 10px 0;
+    }
+
+    /* Notes Grid */
+    .notes-grid,
+    .all-notes-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+        padding: 10px;
+    }
+
+    /* Action Buttons */
+    .action-buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        margin: 15px 0;
+    }
+
+    .view-all-btn,
+    .create-note-link {
+        width: 80%;
+        text-align: center;
+    }
+
+    /* Create Note Form */
+    .create-note-section {
+        max-width: 90%;
+        padding: 15px;
+        margin: 15px auto;
+    }
+
+    .note-form {
+        width: 100%;
+    }
+
+    .note-input,
+    .note-textarea {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .create-note-btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    /* Note Cards */
+    .note-card {
+        padding: 15px;
+    }
+
+    .note-actions {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .edit-btn,
+    .delete-btn {
+        width: 100%;
+    }
+
+    /* Navigation */
+    .nav-buttons {
+        margin: 15px auto;
+        width: 90%;
+    }
+
+    .back-btn {
+        display: block;
+        width: 100%;
+        text-align: center;
+        box-sizing: border-box;
+    }
+}
+
+/* Small Mobile Devices (up to 480px) */
+@media screen and (max-width: 480px) {
+    /* Typography */
+    h1 {
+        font-size: 1.8rem;
+        padding: 0 10px;
+    }
+
+    /* Form Elements */
+    .Title_Input {
+        width: 90%;
+    }
+
+    .Title_Button {
+        width: 90%;
+    }
+
+    /* Action Buttons */
+    .view-all-btn,
+    .create-note-link {
+        width: 90%;
+    }
+
+    /* Create Note Form */
+    .create-note-section {
+        padding: 10px;
+        width: 95%;
+        max-width: 95%;
+        margin: 10px auto;
+        box-sizing: border-box;
+    }
+
+    .form-group {
+        margin-bottom: 10px;
+    }
+
+    .form-group label {
+        font-size: 1rem;
+        margin-bottom: 5px;
+    }
+
+    .note-textarea {
+        min-height: 150px;
+    }
+
+    /* Navigation */
+    .nav-buttons {
+        width: 95%;
+    }
+} 

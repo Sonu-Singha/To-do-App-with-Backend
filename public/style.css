@@ -1,5 +1,283 @@
 /* Code starts from here */
 
-body{
-    background-color: aliceblue;
+/* Global Box Sizing */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: rgb(46, 103, 152);
+    padding: 15px;
+}
+
+/* H1 Section */
+h1 {
+    /* border: 1px solid rgb(10, 10, 10); */
+    text-align: center;
+    color: rgb(211, 211, 211);
+    font-size: 2.5rem;
+    font-family: Arial, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 20px 0;
+}
+
+/* Form Section */
+.Title_Form {
+    /* border: 1px solid red; */
+    font-size: 1.5rem;
+    color: rgb(0, 0, 0);
+    padding: 10px;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Title_Input {
+    border: 1.6px solid rgb(0, 145, 255);
+    font-size: 1rem;
+    height: 45px;
+    width: 35%;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.Title_Input:focus {
+    outline: 2px solid rgb(0, 145, 255);
+}
+
+.Title_Button {
+    border: 2px solid rgb(0, 0, 0);
+    font-size: 1rem;
+    height: 45px;
+    width: 10%;
+    border-radius: 10px;
+    background-color: rgb(48, 165, 255);
+    color: rgb(57, 57, 57);
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.Title_Button:hover {
+    cursor: pointer;
+    background-color: rgb(36, 156, 248);
+    color: black;
+}
+
+/* Notes Section Styles */
+.notes-section {
+    padding: 20px;
+    margin-top: 20px;
+}
+
+/* Action Buttons */
+.action-buttons {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+    margin-left: 30px;
+}
+
+.create-note-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: rgb(48, 165, 255);
+    color: rgb(57, 57, 57);
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    border: 2px solid rgb(0, 0, 0);
+}
+
+.create-note-link:hover {
+    background-color: rgb(36, 156, 248);
+    color: black;
+    cursor: pointer;
+}
+
+/* View All Notes Button */
+.view-all-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: rgba(255, 145, 48, 0.888);
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    border: 2px solid rgb(0, 0, 0);
+}
+
+.view-all-btn:hover {
+    background-color: rgb(36, 156, 248);
+    color: black;
+    cursor: pointer;
+}
+
+/* Notes Grid */
+.notes-grid,
+.all-notes-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Note Card */
+.note-card {
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.note-card h3 {
+    color: rgb(0, 0, 0);
+    margin-bottom: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.note-card p {
+    color: rgb(57, 57, 57);
+    margin-bottom: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Note Actions */
+.note-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.edit-btn,
+.delete-btn {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+.edit-btn {
+    background-color: rgb(48, 165, 255);
+    color: rgb(57, 57, 57);
+}
+
+.delete-btn {
+    background-color: rgb(255, 77, 77);
+    color: white;
+}
+
+.edit-btn:hover {
+    background-color: rgb(36, 156, 248);
+    color: black;
+}
+
+.delete-btn:hover {
+    background-color: rgb(255, 51, 51);
+}
+
+/* Navigation Buttons */
+.nav-buttons {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.back-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: rgb(48, 165, 255);
+    color: rgb(57, 57, 57);
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    border: 2px solid rgb(0, 0, 0);
+}
+
+.back-btn:hover {
+    background-color: rgb(36, 156, 248);
+    color: black;
+    cursor: pointer;
+}
+
+/* Create Note Form Styles */
+.create-note-section {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.note-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-group label {
+    color: rgb(0, 0, 0);
+    font-size: 1.1rem;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.note-input {
+    border: 1.6px solid rgb(0, 145, 255);
+    font-size: 1rem;
+    padding: 12px;
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.note-textarea {
+    border: 1.6px solid rgb(0, 145, 255);
+    font-size: 1rem;
+    padding: 12px;
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    font-family: Arial, Helvetica, sans-serif;
+    min-height: 200px;
+    resize: vertical;
+}
+
+.note-input:focus,
+.note-textarea:focus {
+    outline: 2px solid rgb(0, 145, 255);
+}
+
+.create-note-btn {
+    border: 2px solid rgb(0, 0, 0);
+    font-size: 1rem;
+    padding: 12px 24px;
+    border-radius: 10px;
+    background-color: rgb(48, 165, 255);
+    color: rgb(57, 57, 57);
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    cursor: pointer;
+    align-self: flex-start;
+}
+
+.create-note-btn:hover {
+    background-color: rgb(36, 156, 248);
+    color: black;
 }

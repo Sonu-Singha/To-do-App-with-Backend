@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Create Note - ToDo List App</title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/responsive.css">
+</head>
+
+<body>
+    <!-- Main Heading -->
+    <h1>CREATE NEW NOTE</h1>
+
+    <!-- Back to Home Button -->
+    <div class="nav-buttons">
+        <a href="/" class="back-btn">Back to Home</a>
+    </div>
+
+    <!-- Create Note Form -->
+    <div class="create-note-section">
+        <form action="/create-note" method="post" class="note-form">
+            <!-- Title Input -->
+            <div class="form-group">
+                <label for="title">Note Title</label>
+                <input type="text" id="title" name="title" class="note-input" placeholder="Enter note title" required>
+            </div>
+
+            <!-- Description Input -->
+            <div class="form-group">
+                <label for="description">Note Description</label>
+                <textarea id="description" name="description" class="note-textarea" placeholder="Enter note description" required></textarea>
+            </div>
+
+            <!-- Submit Button -->
+            <div class="form-group">
+                <button type="submit" class="create-note-btn">Create Note</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="/script.js"></script>
+</body>
+
+</html> 

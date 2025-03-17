@@ -7,15 +7,15 @@
 
 import express from 'express'; //express module
 import path from 'path'; //path module
-import {fileURLToPath} from 'url'; //fileURLToPath module
+import { fileURLToPath } from 'url'; //fileURLToPath module
 
 
 
 
 // Setting the filename and directory name
 
-const filename= fileURLToPath(import.meta.url);
-const dirname= path.dirname(filename);
+const filename = fileURLToPath(import.meta.url);
+const dirname = path.dirname(filename);
 
 
 
@@ -23,9 +23,9 @@ const dirname= path.dirname(filename);
 
 // Creating the express app
 
-const app= express();
-const port= 3000;
-app.use(express.static(path.join(dirname,'public')));
+const app = express();
+const port = 3000;
+app.use(express.static(path.join(dirname, 'public')));
 
 
 
@@ -34,7 +34,7 @@ app.use(express.static(path.join(dirname,'public')));
 
 // Setting the view engine
 
-app.set('view engine','ejs');
+app.set('view engine', 'ejs');
 
 
 
@@ -42,9 +42,19 @@ app.set('view engine','ejs');
 
 // Creating Routes
 
-app.get('/',(req,res)=>{
+app.get('/', (req, res) => {
     res.render('index');
 });
+
+app.get("/all-notes", function (req, res) {
+    res.render("all-notes");
+
+})
+
+app.post("/create-note", function (req, res) {
+    res.render("create-note")
+    
+})
 
 
 
@@ -53,7 +63,6 @@ app.get('/',(req,res)=>{
 
 // Starting the server
 
-app.listen(port,()=>{
+app.listen(port, () => {
     console.log(`Server is running on port ${port}`);
 });
- 
