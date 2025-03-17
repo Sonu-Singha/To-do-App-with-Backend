@@ -12,6 +12,21 @@ import { fileURLToPath } from 'url'; //fileURLToPath module
 
 
 
+
+
+
+
+// Importing DB
+
+import Note from "./Notes-Models/note.model.js"; 
+
+
+
+
+
+
+
+
 // Setting the filename and directory name
 
 const filename = fileURLToPath(import.meta.url);
@@ -53,7 +68,7 @@ app.get("/all-notes", function (req, res) {
 
 app.post("/create-note", function (req, res) {
     res.render("create-note")
-    
+
 })
 
 
