@@ -24,6 +24,12 @@
         max-width: 90%;
         margin: 15px auto;
     }
+
+    /* View Note Section */
+    .view-note-section {
+        max-width: 90%;
+        margin: 15px auto;
+    }
 }
 
 /* Mobile Devices (up to 767px) */
@@ -92,6 +98,27 @@
     }
 
     .create-note-btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    /* View Note Styles */
+    .view-note-section {
+        max-width: 90%;
+        padding: 15px;
+    }
+
+    .view-note-title {
+        font-size: 1.7rem;
+    }
+
+    .view-note-actions {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .view-edit-btn, 
+    .view-delete-btn {
         width: 100%;
         text-align: center;
     }
@@ -168,6 +195,23 @@
 
     .note-textarea {
         min-height: 150px;
+    }
+
+    /* View Note Styles */
+    .view-note-section {
+        padding: 10px;
+        width: 95%;
+        max-width: 95%;
+    }
+
+    .view-note-title {
+        font-size: 1.5rem;
+        padding-bottom: 10px;
+    }
+
+    .view-note-description {
+        min-height: 150px;
+        padding: 10px;
     }
 
     /* Navigation */

@@ -20,22 +20,24 @@
 
     <!-- Create Note Form -->
     <div class="create-note-section">
-        <form action="/create-note" method="post" class="note-form">
+        <form action="/create-note/<%= note._id %>" method="post" class="note-form">
             <!-- Title Input -->
             <div class="form-group">
                 <label for="title">Note Title</label>
-                <input type="text" id="title" name="title" class="note-input" placeholder="Enter note title" required>
+                <input type="text" id="title" name="title" value="<%= note.title %>" class="note-input"
+                    placeholder="Enter note title" required>
             </div>
 
             <!-- Description Input -->
             <div class="form-group">
-                <label for="description">Note Description</label>
-                <textarea id="description" name="description" class="note-textarea" placeholder="Enter note description" required></textarea>
+                <label for="description">Enter Your Note Here</label>
+                <textarea id="description" name="description" class="note-textarea" placeholder="Enter note description"
+                    required><%= note.description %></textarea>
             </div>
 
             <!-- Submit Button -->
             <div class="form-group">
-                <button type="submit" class="create-note-btn">Create Note</button>
+                <button type="submit" class="create-note-btn">Finish Writing</button>
             </div>
         </form>
     </div>
@@ -43,4 +45,4 @@
     <script src="/script.js"></script>
 </body>
 
-</html> 
+</html>

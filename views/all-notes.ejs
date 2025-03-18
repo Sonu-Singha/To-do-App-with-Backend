@@ -20,68 +20,44 @@
 
     <!-- All Notes Grid -->
     <div class="all-notes-grid">
-        <!-- Note Card 1 -->
-        <div class="note-card">
-            <h3>Sample Note 1</h3>
-            <p>This is a sample note description...</p>
-            <div class="note-actions">
-                <button class="edit-btn">Edit</button>
-                <button class="delete-btn">Delete</button>
-            </div>
-        </div>
 
-        <!-- Note Card 2 -->
-        <div class="note-card">
-            <h3>Sample Note 2</h3>
-            <p>This is a sample note description...</p>
-            <div class="note-actions">
-                <button class="edit-btn">Edit</button>
-                <button class="delete-btn">Delete</button>
-            </div>
-        </div>
+        <!-- Dynamically Loading Few Note carts -->
 
-        <!-- Note Card 3 -->
-        <div class="note-card">
-            <h3>Sample Note 3</h3>
-            <p>This is a sample note description...</p>
-            <div class="note-actions">
-                <button class="edit-btn">Edit</button>
-                <button class="delete-btn">Delete</button>
-            </div>
-        </div>
+        <% if (!fewNotes || fewNotes.length<1) { %>
+            <p class="nothing-to-show">There is No Note to display</p>
+            <% } else { %>
+                <% for(let i=0; i < fewNotes.length; i++) { %>
+                    <div class="note-card">
+                        <h3>
+                            <%= fewNotes[i].title %>
+                        </h3>
+                        <p>
+                            <%= fewNotes[i].description %>
+                        </p>
+                        <div class="note-actions">
+                            <form action="/create-note/<%= fewNotes[i]._id %>" method="get">
+                                <button class="edit-btn">Edit</button>
+                            </form>
+                            
+                            <form action="/view-note/<%= fewNotes[i]._id %>" method="get">
+                                <button class="view-btn">View</button>
+                            </form>
 
-        <!-- Note Card 4 -->
-        <div class="note-card">
-            <h3>Sample Note 4</h3>
-            <p>This is a sample note description...</p>
-            <div class="note-actions">
-                <button class="edit-btn">Edit</button>
-                <button class="delete-btn">Delete</button>
-            </div>
-        </div>
+                            <form action="/delete-note/<%= fewNotes[i]._id %>" method="post">
+                                <button class="delete-btn">Delete</button>
+                            </form>
 
-        <!-- Note Card 5 -->
-        <div class="note-card">
-            <h3>Sample Note 5</h3>
-            <p>This is a sample note description...</p>
-            <div class="note-actions">
-                <button class="edit-btn">Edit</button>
-                <button class="delete-btn">Delete</button>
-            </div>
-        </div>
+                        </div>
+                    </div>
+                    <% } %>
+                        <% } %>
 
-        <!-- Note Card 6 -->
-        <div class="note-card">
-            <h3>Sample Note 6</h3>
-            <p>This is a sample note description...</p>
-            <div class="note-actions">
-                <button class="edit-btn">Edit</button>
-                <button class="delete-btn">Delete</button>
-            </div>
-        </div>
+
+
+
     </div>
 
     <script src="/script.js"></script>
 </body>
 
-</html> 
+</html>

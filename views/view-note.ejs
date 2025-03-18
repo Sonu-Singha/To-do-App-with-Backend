@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>View Note - ToDo List App</title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/responsive.css">
+</head>
+
+<body>
+    <!-- Main Heading -->
+    <h1>VIEW NOTE</h1>
+
+    <!-- Navigation Buttons -->
+    <div class="nav-buttons">
+        <a href="/" class="back-btn">Back to Home</a>
+    </div>
+
+    <!-- View Note Section -->
+    <div class="view-note-section">
+        <div class="view-note-content">
+            <!-- Note Title -->
+            <h2 class="view-note-title"><%= note.title %> </h2>
+            
+            <div class="view-note-actions">
+                <a href="/create-note/<%= note._id %>" class="view-edit-btn">Edit Note</a>
+                <form action="/delete-note/<%= note._id %>" method="post">
+                    <button class="delete-btn">Delete</button>
+                </form>
+            </div>
+            
+            <!-- Note Description -->
+            <div class="view-note-description">
+                <p><%= note.description %></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="/script.js"></script>
+</body>
+
+</html> 
